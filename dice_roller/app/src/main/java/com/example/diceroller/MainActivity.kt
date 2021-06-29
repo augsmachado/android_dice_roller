@@ -8,14 +8,14 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var diceImage: ImageView
+    private lateinit var diceImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val rollButton: Button = findViewById(R.id.roll_button)
-        rollButton.text = "Let's roll!"
+        rollButton.text = getString(R.string.roll)
 
         rollButton.setOnClickListener {
             rollDice()
